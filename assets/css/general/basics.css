@@ -1,5 +1,6 @@
 :root {
-    --brand-color: #ff572f;
+    /*--brand-color: #ff572f;*/ /*Theme Original*/
+    --brand-color: #e31c60; /*Meine ESUX Brandfarbe*/
     --primary-text-color: #333;
     --secondary-text-color: #999;
     --white-color: #fff;
