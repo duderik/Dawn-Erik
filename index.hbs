@@ -1,10 +1,28 @@
 {{!< default}}
 
+{{!-- Original code
 <div class="content-area">
     <main class="site-main">
         <div class="post-feed container medium">
             {{#foreach posts visibility="all"}}
                 {{> "loop"}}
+            {{/foreach}}
+        </div>
+        {{pagination}}
+    </main>
+</div>
+--}}
+
+{{!-- Edited code by Erik: exclude tag "blog" from home --}}
+<div class="content-area">
+    <main class="site-main">
+        <div class="post-feed container medium">
+            {{#foreach posts visibility="all"}}
+              {{#has tag="blog"}}
+                  {{!-- show nothing nothing --}}
+              {{else}}
+                  {{> "loop"}}
+              {{/has}}
             {{/foreach}}
         </div>
         {{pagination}}
